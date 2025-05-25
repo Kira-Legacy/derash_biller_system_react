@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 200, 200);
+}
+
+.container {
+    margin-top: 30px;
+}
+
+.table {
+    width: fit-content;
+    margin-left: 10px;
+}
+
+.logoutButton {
+    background-color: #ff0229;
+    color: white;
+    font-size: 1.4rem;
+    border: 2.5px solid white;
+    border-radius: 50px;
+    margin: 0 25px 10px 0;
+    padding: 5px 10px 10px 10px;
+}
+
+.logout {
+    width: 10%;
+    margin-top: 40px;
+    margin-left: -75px;
+
+}
+
+.confirmation-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    height: 300px;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 150, 150);
+    border: 1px solid #000000;
+    padding: 20px;
+    z-index: 1000;
+    border-radius: 20%;
+}
+
+.confirmation-box p {
+    font-size: 2.65rem;
+    color: black;
+}
+
+.confirmyes {
+    margin-right: 60px;
+    margin-left: 40px;
+}
+
+.confirmation-box button {
+    font-size: 1.65rem;
+    border-radius: 20px;
+    padding: 5px 10px 5px 10px;
+    margin-bottom: 10px;
+}
+
+.billDataTitle {
+    margin-left: 10px;
+    font-size: 1.6rem;
+}
+
+
+.upload {
+    text-align: center;
+}
+
+.getBillDiv {
+    text-align: center;
+}
+
+#getBillButton,
+#postBillButton,
+#billId {
+    font-size: 1.4rem;
+}
+
+#billId {
+    height: 40px;
+}
+
+.btn {
+    color: white;
+}
+
+#postBillButton {
+    margin-top: 15px;
+}
+
+.billdisplay>*:not(.billDataTitle) {
+    text-align: center;
+}
+
+.error-message {
+    font-size: 2rem;
+    color: #ff0229;
+}
+
+.closeButton {
+    padding: 3px;
+    margin-right: 20px;
+}
+
+.btn-warning {
+    padding: 3px;
+}
+
+.billSucess {
+    color: green;
+}
+
+.billcreate {
+    text-align: center;
+}

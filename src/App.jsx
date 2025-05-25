@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./Header";
-import Form from "./Form";
+import Header from "./Frontend/Header";
+import Form from "./Frontend/Form";
 
 function App(){
     return <div><Header />

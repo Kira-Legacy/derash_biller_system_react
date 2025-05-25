@@ -1,0 +1,28 @@
+.popup {
+    width: 100vh;
+    height: 99.5%;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: rgb(245, 245, 245);
+    padding: 2px 0;
+    color: rgb(0, 0, 0);
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.popup h2 {
+    font-size: 1.5rem;
+}
+
+.popup input {
+    border-radius: 10px;
+}

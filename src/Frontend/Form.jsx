@@ -30,7 +30,7 @@ function Form() {
             <strong>Password: </strong>
           </label>
           <input
-            type={showPassword ? "text" : "password"} // Dynamic type based on state
+            type={showPassword ? "text" : "password"}
             className="bottominput"
             placeholder="Password goes here"
             name="password"
@@ -41,8 +41,8 @@ function Form() {
             <input
               type="checkbox"
               id="show"
-              checked={showPassword} // Controlled component: checkbox state tied to React state
-              onChange={handleCheckboxChange} // Event handler for checkbox changes
+              checked={showPassword} 
+              onChange={handleCheckboxChange} 
             />
             <label htmlFor="show" className="showPasswordLabel">
               Show Password
