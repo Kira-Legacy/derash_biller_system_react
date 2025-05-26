@@ -5,7 +5,7 @@ function Popup() {
     return (
         <div className="popup">
             <h2>Post a Bill</h2>
-            <p>Inorder to post a bill you will need to fill in the following informations.<span style="color: red;"> *</span> </p>
+            <p>Inorder to post a bill you will need to fill in the following informations.<span style={{color: "red" }}> *</span> </p>
             <form action="/postbill" method="post">
                 <label for="postbillId">Bill ID:</label>
                 <input type="number" id="billIdInput" name="bill_id" required autocomplete="off" /><br /><br />

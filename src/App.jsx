@@ -1,10 +1,12 @@
 import React from "react";
-import Header from "./Frontend/Header";
-import Form from "./Frontend/Form";
+import Frontend from "./Frontend/Frontend";
+import Backend from "./Backend/Backend";
+
 
 function App(){
-    return <div><Header />
-    <Form />
+    return <div>
+        <Frontend />
+        <Backend />
     </div>;
 };
 

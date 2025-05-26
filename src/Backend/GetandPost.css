@@ -1,0 +1,36 @@
+.container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.upload {
+    text-align: center;
+}
+
+.getBillDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.getBillInput {
+    margin-top: 2.5px;
+    margin-right: 5px;
+}
+
+#getBillButton,
+#postBillButton,
+#billId {
+    font-size: 1.4rem;
+}
+
+#billId {
+    height: 40px;
+}
+
+.btn {
+    color: white;
+}
+
+#postBillButton {
+    margin-top: 15px;
+}

@@ -1,6 +1,16 @@
 import React from "react";
-import "./Popup"
+import Header from "./Header";
+import GetandPost from "./GetandPost";
+
+
 
 function Backend(){
-    return
+    return(
+        <div>
+            <Header />
+            <GetandPost />
+        </div>
+    )
 }
+
+export default Backend;
