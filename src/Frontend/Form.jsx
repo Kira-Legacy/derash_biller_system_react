@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate} from "react-router-dom";
 import "./Form.css";
 
 function Form() {
@@ -10,37 +11,45 @@ function Form() {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  
-  const handleUsernameChange = (event) =>{
+  const navigate = useNavigate();
+
+  const handleUsernameChange = (event) => {
     setUsername(event.target.value);
   };
 
-  const handlePasswordChange = (event) =>{
+  const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
 
-  const handleSubmit = async (event) =>{
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    console.log("Submitting: ", {username, password});
+    console.log("Submitting: ", { username, password });
 
-    try{
-      const response = await fetch('http://localhost:3001/credentialsubmit',{
-        method: 'POST',
+    try {
+      const response = await fetch("http://localhost:3001/credentialssubmit", { // <-- IMPORTANT: Point to your Express server
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json", // <-- Specify JSON content
         },
-        body: JSON.stringify({username, password}),
+        body: JSON.stringify({ username, password }), // <-- Send data as JSON
       });
-      if(response.ok){
-        const data = await response.json();
-        console.log("Login successful:", data);
+
+      const data = await response.json();
+      console.log("Backend response:", data);
+
+      if (response.ok) {
+        
+        alert(data.message);
+        navigate("/credentialssubmit");
+
       } else {
-        const errorData = await response.json();
-        console.error("Login failed:", errorData.message);
+
+        alert(data.message);
       }
-    } catch(error){
-      console.error("Network or server error:", error);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("An error occurred. Please try again.");
     }
   };
 
@@ -56,12 +65,12 @@ function Form() {
             <strong>Email: </strong>
           </label>
           <input type="email" placeholder="example@example.com" name="username" required autoComplete="off"
-          />
+          value={username} onChange={handleUsernameChange} />
           <label htmlFor="password" className="passlabel">
             <strong>Password: </strong>
           </label>
           <input type={showPassword ? "text" : "password"} className="bottominput" placeholder="Password goes here" name="password" required
-            autoComplete="off" />
+            autoComplete="off" value={password} onChange={handlePasswordChange} />
           <div className="showin">
             <input type="checkbox" id="show" checked={showPassword} onChange={handleCheckboxChange} />
             <label htmlFor="show" className="showPasswordLabel">
