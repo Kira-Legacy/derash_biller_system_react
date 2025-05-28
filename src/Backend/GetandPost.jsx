@@ -4,7 +4,6 @@ import './GetandPost.css';
 function GetandPost(){
 
     const [billId, setBillId] = useState("");
-    console.log(billId);
 
     const handleBillidChange = (event) => {
         setBillId(event.target.value);
@@ -15,7 +14,7 @@ function GetandPost(){
         console.log("Submitting ", {billId});
 
         try {
-            const response = await fetch("http://localhost: 3001/getbill", {
+            const response = await fetch("http://localhost:3001/getbill", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

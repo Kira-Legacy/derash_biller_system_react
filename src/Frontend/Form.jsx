@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Form.css";
 
 function Form() {
@@ -39,7 +39,7 @@ function Form() {
       console.log("Backend response:", data);
 
       if (response.ok) {
-        
+
         navigate("/credentialssubmit");
 
       } else {
@@ -64,7 +64,7 @@ function Form() {
             <strong>Email: </strong>
           </label>
           <input type="email" placeholder="example@example.com" name="username" required autoComplete="off"
-          value={username} onChange={handleUsernameChange} />
+            value={username} onChange={handleUsernameChange} />
           <label htmlFor="password" className="passlabel">
             <strong>Password: </strong>
           </label>

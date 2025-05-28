@@ -19,10 +19,6 @@ app.use(session({
     saveUninitialized: false,
     cookie: { secure: false }
 }));
-
-app.get("/", (req, res) => {
-    res.render("index.ejs");
-});
   
 
 app.post("/credentialssubmit", (req, res) => {
@@ -31,20 +27,13 @@ app.post("/credentialssubmit", (req, res) => {
 
    if (username === "Kirubelwinner@gmail.com" && password === "Biller#23") {
     req.session.authorize = true;
-    res.status(200).json({success: true, message: "Login successful!"});
+    res.status(200).json({success: true});
    } else {
     req.session.authorize = false;
     res.status(401).json({success: false, message: "Invalid username or password."});
    }
 });
 
-app.get("/dashboard", (req, res) => {
-    if (req.session.authorize) {
-        res.status(200).send("Welcome to the Dashboard!");
-    } else {
-        res.status(403).send("Unauthorized. Please log in.");
-    }
-});
 
 const apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRXRoaW9waWFuIFJldmVudWVzIGFuZCBDdXN0b21zIEF1dGhvcml0eSIsInN1YiI6IjIxNTUyMSIsInBlcm1pc3Npb25zIjpbIkJJTExFUiJdLCJpc3MiOiJodHRwczovL2FwaS5kZXJhc2guZ292LmV0IiwianRpIjoiNzcyZWI5MTAtYjI2Mi0xMWU4LWFhZTgtODM1ZTg0YjM3MWJiIiwiaWF0IjoxNTM2Mjk5NjYxfQ.k9M2rYdhCc09z27wDCieuYvlYhPHnzv3j75pupok5co';
 const apiSecret = 'iknojx9uviygrsivhrc4qzcime765wzn20o9';
