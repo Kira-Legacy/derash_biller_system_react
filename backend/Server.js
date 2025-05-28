@@ -13,22 +13,6 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-// function billUpload(req, res, next) {
-
-//     var userName = req.body["username"];
-//     var password = req.body["password"];
-
-//     if (userName === "Kirubelwinner@gmail.com" && password === "Biller#23") {
-//             authorize = true;
-//             next();
-//     }
-
-//     else {
-        
-//     }
-
-// }
-
 app.use(session({
     secret: 'iknojx9uviygrsivhrc4qzcime765wzn20o9',
     resave: false,

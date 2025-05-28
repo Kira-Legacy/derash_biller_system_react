@@ -40,7 +40,6 @@ function Form() {
 
       if (response.ok) {
         
-        alert(data.message);
         navigate("/credentialssubmit");
 
       } else {

@@ -1,19 +1,19 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Form from './Frontend/Form'; 
+import Form from './Frontend/Form';
 import Frontend from "./Frontend/Frontend";
 import Backend from "./Backend/Backend";
 
 
-function App(){
+function App() {
     return <div>
         <Router>
-        <Routes>
-            <Route path="/" element={ <Frontend />} />
-            <Route path="/credentialssubmit" element={<Backend />} />
+            <Routes>
+                <Route path="/" element={<Frontend />} />
+                <Route path="/credentialssubmit" element={<Backend />} />
             </Routes>
         </Router>
-        
+
     </div>;
 };
 
