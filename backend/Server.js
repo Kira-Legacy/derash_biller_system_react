@@ -39,8 +39,8 @@ const apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRXRoaW9waWFuIFJ
 const apiSecret = 'iknojx9uviygrsivhrc4qzcime765wzn20o9';
 
 app.get("/getbill", async (req, res) => {
-    const billIDInput = req.query["billId"];
-    const apiUrl = `https://api.qa.derash.gov.et/biller/customer-bill-data?bill_id=${billIDInput}`;
+    const {billId} = req.query["billId"];
+    const apiUrl = `https://api.qa.derash.gov.et/biller/customer-bill-data?bill_id=${billId}`;
 
     try {
         const response = await axios.get(apiUrl, {

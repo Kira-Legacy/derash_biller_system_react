@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Form from './Frontend/Form';
 import Frontend from "./Frontend/Frontend";
 import Backend from "./Backend/Backend";
 
